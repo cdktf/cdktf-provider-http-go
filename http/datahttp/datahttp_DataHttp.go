@@ -13,6 +13,9 @@ import (
 type DataHttp interface {
 	cdktf.TerraformDataSource
 	Body() *string
+	CaCertPem() *string
+	SetCaCertPem(val *string)
+	CaCertPemInput() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
@@ -34,6 +37,9 @@ type DataHttp interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	Id() *string
+	Insecure() interface{}
+	SetInsecure(val interface{})
+	InsecureInput() interface{}
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -92,6 +98,8 @@ type DataHttp interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	ResetCaCertPem()
+	ResetInsecure()
 	ResetMethod()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
@@ -118,6 +126,26 @@ func (j *jsiiProxy_DataHttp) Body() *string {
 	_jsii_.Get(
 		j,
 		"body",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataHttp) CaCertPem() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"caCertPem",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataHttp) CaCertPemInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"caCertPemInput",
 		&returns,
 	)
 	return returns
@@ -198,6 +226,26 @@ func (j *jsiiProxy_DataHttp) Id() *string {
 	_jsii_.Get(
 		j,
 		"id",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataHttp) Insecure() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"insecure",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataHttp) InsecureInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"insecureInput",
 		&returns,
 	)
 	return returns
@@ -413,6 +461,17 @@ func NewDataHttp_Override(d DataHttp, scope constructs.Construct, id *string, co
 	)
 }
 
+func (j *jsiiProxy_DataHttp)SetCaCertPem(val *string) {
+	if err := j.validateSetCaCertPemParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"caCertPem",
+		val,
+	)
+}
+
 func (j *jsiiProxy_DataHttp)SetCount(val *float64) {
 	_jsii_.Set(
 		j,
@@ -433,6 +492,17 @@ func (j *jsiiProxy_DataHttp)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DataHttp)SetInsecure(val interface{}) {
+	if err := j.validateSetInsecureParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"insecure",
 		val,
 	)
 }
@@ -725,6 +795,22 @@ func (d *jsiiProxy_DataHttp) OverrideLogicalId(newLogicalId *string) {
 		d,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
+	)
+}
+
+func (d *jsiiProxy_DataHttp) ResetCaCertPem() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetCaCertPem",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DataHttp) ResetInsecure() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetInsecure",
+		nil, // no parameters
 	)
 }
 

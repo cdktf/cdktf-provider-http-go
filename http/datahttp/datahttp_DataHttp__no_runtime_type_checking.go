@@ -1,5 +1,4 @@
 //go:build no_runtime_type_checking
-// +build no_runtime_type_checking
 
 package datahttp
 
@@ -54,6 +53,14 @@ func (d *jsiiProxy_DataHttp) validateOverrideLogicalIdParameters(newLogicalId *s
 }
 
 func validateDataHttp_IsConstructParameters(x interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataHttp) validateSetCaCertPemParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataHttp) validateSetInsecureParameters(val interface{}) error {
 	return nil
 }
 
