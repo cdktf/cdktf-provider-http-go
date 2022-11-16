@@ -56,6 +56,14 @@ func validateDataHttp_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateDataHttp_IsTerraformDataSourceParameters(x interface{}) error {
+	return nil
+}
+
+func validateDataHttp_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataHttp) validateSetCaCertPemParameters(val *string) error {
 	return nil
 }

@@ -16,6 +16,14 @@ func validateHttpProvider_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateHttpProvider_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateHttpProvider_IsTerraformProviderParameters(x interface{}) error {
+	return nil
+}
+
 func validateNewHttpProviderParameters(scope constructs.Construct, id *string, config *HttpProviderConfig) error {
 	return nil
 }
