@@ -2,14 +2,14 @@ package datahttp
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-http-go/http/v3/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-http-go/http/v4/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-http-go/http/v3/datahttp/internal"
+	"github.com/cdktf/cdktf-provider-http-go/http/v4/datahttp/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/http/d/http http}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http http}.
 type DataHttp interface {
 	cdktf.TerraformDataSource
 	Body() *string
@@ -21,9 +21,9 @@ type DataHttp interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -171,8 +171,8 @@ func (j *jsiiProxy_DataHttp) ConstructNodeMetadata() *map[string]interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_DataHttp) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_DataHttp) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -432,7 +432,7 @@ func (j *jsiiProxy_DataHttp) UrlInput() *string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/http/d/http http} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http http} Data Source.
 func NewDataHttp(scope constructs.Construct, id *string, config *DataHttpConfig) DataHttp {
 	_init_.Initialize()
 
@@ -450,7 +450,7 @@ func NewDataHttp(scope constructs.Construct, id *string, config *DataHttpConfig)
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/http/d/http http} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http http} Data Source.
 func NewDataHttp_Override(d DataHttp, scope constructs.Construct, id *string, config *DataHttpConfig) {
 	_init_.Initialize()
 
@@ -472,7 +472,10 @@ func (j *jsiiProxy_DataHttp)SetCaCertPem(val *string) {
 	)
 }
 
-func (j *jsiiProxy_DataHttp)SetCount(val *float64) {
+func (j *jsiiProxy_DataHttp)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",
