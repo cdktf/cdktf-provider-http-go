@@ -111,6 +111,17 @@ func (d *jsiiProxy_DataHttp) validateOverrideLogicalIdParameters(newLogicalId *s
 	return nil
 }
 
+func (d *jsiiProxy_DataHttp) validatePutRetryParameters(value *DataHttpRetry) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
 func validateDataHttp_IsConstructParameters(x interface{}) error {
 	if x == nil {
 		return fmt.Errorf("parameter x is required, but nil was provided")
@@ -245,6 +256,14 @@ func (j *jsiiProxy_DataHttp) validateSetRequestBodyParameters(val *string) error
 }
 
 func (j *jsiiProxy_DataHttp) validateSetRequestHeadersParameters(val *map[string]*string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_DataHttp) validateSetRequestTimeoutMsParameters(val *float64) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

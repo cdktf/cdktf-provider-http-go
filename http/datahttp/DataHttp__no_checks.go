@@ -52,6 +52,10 @@ func (d *jsiiProxy_DataHttp) validateOverrideLogicalIdParameters(newLogicalId *s
 	return nil
 }
 
+func (d *jsiiProxy_DataHttp) validatePutRetryParameters(value *DataHttpRetry) error {
+	return nil
+}
+
 func validateDataHttp_IsConstructParameters(x interface{}) error {
 	return nil
 }
@@ -89,6 +93,10 @@ func (j *jsiiProxy_DataHttp) validateSetRequestBodyParameters(val *string) error
 }
 
 func (j *jsiiProxy_DataHttp) validateSetRequestHeadersParameters(val *map[string]*string) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataHttp) validateSetRequestTimeoutMsParameters(val *float64) error {
 	return nil
 }
 

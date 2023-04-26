@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http http}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http http}.
 type DataHttp interface {
 	cdktf.TerraformDataSource
 	Body() *string
@@ -61,8 +61,13 @@ type DataHttp interface {
 	RequestHeaders() *map[string]*string
 	SetRequestHeaders(val *map[string]*string)
 	RequestHeadersInput() *map[string]*string
+	RequestTimeoutMs() *float64
+	SetRequestTimeoutMs(val *float64)
+	RequestTimeoutMsInput() *float64
 	ResponseBody() *string
 	ResponseHeaders() cdktf.StringMap
+	Retry() DataHttpRetryOutputReference
+	RetryInput() interface{}
 	StatusCode() *float64
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
@@ -98,6 +103,7 @@ type DataHttp interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutRetry(value *DataHttpRetry)
 	ResetCaCertPem()
 	ResetInsecure()
 	ResetMethod()
@@ -106,6 +112,8 @@ type DataHttp interface {
 	ResetOverrideLogicalId()
 	ResetRequestBody()
 	ResetRequestHeaders()
+	ResetRequestTimeoutMs()
+	ResetRetry()
 	SynthesizeAttributes() *map[string]interface{}
 	// Experimental.
 	ToMetadata() interface{}
@@ -351,6 +359,26 @@ func (j *jsiiProxy_DataHttp) RequestHeadersInput() *map[string]*string {
 	return returns
 }
 
+func (j *jsiiProxy_DataHttp) RequestTimeoutMs() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"requestTimeoutMs",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataHttp) RequestTimeoutMsInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"requestTimeoutMsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataHttp) ResponseBody() *string {
 	var returns *string
 	_jsii_.Get(
@@ -366,6 +394,26 @@ func (j *jsiiProxy_DataHttp) ResponseHeaders() cdktf.StringMap {
 	_jsii_.Get(
 		j,
 		"responseHeaders",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataHttp) Retry() DataHttpRetryOutputReference {
+	var returns DataHttpRetryOutputReference
+	_jsii_.Get(
+		j,
+		"retry",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataHttp) RetryInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"retryInput",
 		&returns,
 	)
 	return returns
@@ -432,7 +480,7 @@ func (j *jsiiProxy_DataHttp) UrlInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http http} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http http} Data Source.
 func NewDataHttp(scope constructs.Construct, id *string, config *DataHttpConfig) DataHttp {
 	_init_.Initialize()
 
@@ -450,7 +498,7 @@ func NewDataHttp(scope constructs.Construct, id *string, config *DataHttpConfig)
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http http} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http http} Data Source.
 func NewDataHttp_Override(d DataHttp, scope constructs.Construct, id *string, config *DataHttpConfig) {
 	_init_.Initialize()
 
@@ -558,6 +606,17 @@ func (j *jsiiProxy_DataHttp)SetRequestHeaders(val *map[string]*string) {
 	_jsii_.Set(
 		j,
 		"requestHeaders",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DataHttp)SetRequestTimeoutMs(val *float64) {
+	if err := j.validateSetRequestTimeoutMsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"requestTimeoutMs",
 		val,
 	)
 }
@@ -839,6 +898,17 @@ func (d *jsiiProxy_DataHttp) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
+func (d *jsiiProxy_DataHttp) PutRetry(value *DataHttpRetry) {
+	if err := d.validatePutRetryParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"putRetry",
+		[]interface{}{value},
+	)
+}
+
 func (d *jsiiProxy_DataHttp) ResetCaCertPem() {
 	_jsii_.InvokeVoid(
 		d,
@@ -883,6 +953,22 @@ func (d *jsiiProxy_DataHttp) ResetRequestHeaders() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetRequestHeaders",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DataHttp) ResetRequestTimeoutMs() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetRequestTimeoutMs",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DataHttp) ResetRetry() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetRetry",
 		nil, // no parameters
 	)
 }
