@@ -2,14 +2,14 @@ package datahttp
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-http-go/http/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-http-go/http/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-http-go/http/v5/datahttp/internal"
+	"github.com/cdktf/cdktf-provider-http-go/http/v6/datahttp/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http http}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/http/3.4.0/docs/data-sources/http http}.
 type DataHttp interface {
 	cdktf.TerraformDataSource
 	Body() *string
@@ -65,6 +65,7 @@ type DataHttp interface {
 	SetRequestTimeoutMs(val *float64)
 	RequestTimeoutMsInput() *float64
 	ResponseBody() *string
+	ResponseBodyBase64() *string
 	ResponseHeaders() cdktf.StringMap
 	Retry() DataHttpRetryOutputReference
 	RetryInput() interface{}
@@ -389,6 +390,16 @@ func (j *jsiiProxy_DataHttp) ResponseBody() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataHttp) ResponseBodyBase64() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"responseBodyBase64",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataHttp) ResponseHeaders() cdktf.StringMap {
 	var returns cdktf.StringMap
 	_jsii_.Get(
@@ -480,7 +491,7 @@ func (j *jsiiProxy_DataHttp) UrlInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http http} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/http/3.4.0/docs/data-sources/http http} Data Source.
 func NewDataHttp(scope constructs.Construct, id *string, config *DataHttpConfig) DataHttp {
 	_init_.Initialize()
 
@@ -498,7 +509,7 @@ func NewDataHttp(scope constructs.Construct, id *string, config *DataHttpConfig)
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http http} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/http/3.4.0/docs/data-sources/http http} Data Source.
 func NewDataHttp_Override(d DataHttp, scope constructs.Construct, id *string, config *DataHttpConfig) {
 	_init_.Initialize()
 

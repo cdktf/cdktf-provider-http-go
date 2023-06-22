@@ -58,6 +58,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "resetRequestTimeoutMs", GoMethod: "ResetRequestTimeoutMs"},
 			_jsii_.MemberMethod{JsiiMethod: "resetRetry", GoMethod: "ResetRetry"},
 			_jsii_.MemberProperty{JsiiProperty: "responseBody", GoGetter: "ResponseBody"},
+			_jsii_.MemberProperty{JsiiProperty: "responseBodyBase64", GoGetter: "ResponseBodyBase64"},
 			_jsii_.MemberProperty{JsiiProperty: "responseHeaders", GoGetter: "ResponseHeaders"},
 			_jsii_.MemberProperty{JsiiProperty: "retry", GoGetter: "Retry"},
 			_jsii_.MemberProperty{JsiiProperty: "retryInput", GoGetter: "RetryInput"},
