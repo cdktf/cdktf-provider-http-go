@@ -59,6 +59,10 @@ func (d *jsiiProxy_DataHttp) validatePutRetryParameters(value *DataHttpRetry) er
 	return nil
 }
 
+func validateDataHttp_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
+	return nil
+}
+
 func validateDataHttp_IsConstructParameters(x interface{}) error {
 	return nil
 }
