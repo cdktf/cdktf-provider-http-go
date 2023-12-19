@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/http/3.4.0/docs http}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/http/3.4.1/docs http}.
 type HttpProvider interface {
 	cdktf.TerraformProvider
 	Alias() *string
@@ -183,7 +183,7 @@ func (j *jsiiProxy_HttpProvider) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/http/3.4.0/docs http} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/http/3.4.1/docs http} Resource.
 func NewHttpProvider(scope constructs.Construct, id *string, config *HttpProviderConfig) HttpProvider {
 	_init_.Initialize()
 
@@ -201,7 +201,7 @@ func NewHttpProvider(scope constructs.Construct, id *string, config *HttpProvide
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/http/3.4.0/docs http} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/http/3.4.1/docs http} Resource.
 func NewHttpProvider_Override(h HttpProvider, scope constructs.Construct, id *string, config *HttpProviderConfig) {
 	_init_.Initialize()
 
