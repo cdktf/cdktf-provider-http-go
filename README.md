@@ -1,12 +1,15 @@
-# CDKTF Go bindings for hashicorp/http provider version 3.4.1
+# CDKTF Go bindings for hashicorp/http provider version 3.4.2
 
-This repo builds and publishes the [Terraform http provider](https://registry.terraform.io/providers/hashicorp/http/3.4.1/docs) bindings for [CDK for Terraform](https://cdk.tf).
+This repo builds and publishes the [Terraform http provider](https://registry.terraform.io/providers/hashicorp/http/3.4.2/docs) bindings for [CDK for Terraform](https://cdk.tf).
 
 ## Go Package
 
 The go package is generated into the [`github.com/cdktf/cdktf-provider-http-go`](https://github.com/cdktf/cdktf-provider-http-go) package.
 
-`go get github.com/cdktf/cdktf-provider-http-go/http`
+`go get github.com/cdktf/cdktf-provider-http-go/http/<version>`
+
+Where `<version>` is the version of the prebuilt provider you would like to use e.g. `v11`. The full module name can be found
+within the [go.mod](https://github.com/cdktf/cdktf-provider-http-go/blob/main/http/go.mod#L1) file.
 
 ## Docs
 
@@ -20,7 +23,7 @@ This project is explicitly not tracking the Terraform http provider version 1:1.
 These are the upstream dependencies:
 
 * [CDK for Terraform](https://cdk.tf)
-* [Terraform http provider](https://registry.terraform.io/providers/hashicorp/http/3.4.1)
+* [Terraform http provider](https://registry.terraform.io/providers/hashicorp/http/3.4.2)
 * [Terraform Engine](https://terraform.io)
 
 If there are breaking changes (backward incompatible) in any of the above, the major version of this project will be bumped.
