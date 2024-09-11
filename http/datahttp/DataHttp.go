@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/http/3.4.4/docs/data-sources/http http}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/http/3.4.5/docs/data-sources/http http}.
 type DataHttp interface {
 	cdktf.TerraformDataSource
 	Body() *string
@@ -498,7 +498,7 @@ func (j *jsiiProxy_DataHttp) UrlInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/http/3.4.4/docs/data-sources/http http} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/http/3.4.5/docs/data-sources/http http} Data Source.
 func NewDataHttp(scope constructs.Construct, id *string, config *DataHttpConfig) DataHttp {
 	_init_.Initialize()
 
@@ -516,7 +516,7 @@ func NewDataHttp(scope constructs.Construct, id *string, config *DataHttpConfig)
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/http/3.4.4/docs/data-sources/http http} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/http/3.4.5/docs/data-sources/http http} Data Source.
 func NewDataHttp_Override(d DataHttp, scope constructs.Construct, id *string, config *DataHttpConfig) {
 	_init_.Initialize()
 
