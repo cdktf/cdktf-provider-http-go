@@ -79,6 +79,14 @@ func (j *jsiiProxy_DataHttp) validateSetCaCertPemParameters(val *string) error {
 	return nil
 }
 
+func (j *jsiiProxy_DataHttp) validateSetClientCertPemParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataHttp) validateSetClientKeyPemParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataHttp) validateSetCountParameters(val interface{}) error {
 	return nil
 }

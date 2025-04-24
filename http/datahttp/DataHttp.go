@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/http/3.4.5/docs/data-sources/http http}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/http/3.5.0/docs/data-sources/http http}.
 type DataHttp interface {
 	cdktf.TerraformDataSource
 	Body() *string
@@ -21,6 +21,12 @@ type DataHttp interface {
 	CaCertPemInput() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
+	ClientCertPem() *string
+	SetClientCertPem(val *string)
+	ClientCertPemInput() *string
+	ClientKeyPem() *string
+	SetClientKeyPem(val *string)
+	ClientKeyPemInput() *string
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
@@ -109,6 +115,8 @@ type DataHttp interface {
 	OverrideLogicalId(newLogicalId *string)
 	PutRetry(value *DataHttpRetry)
 	ResetCaCertPem()
+	ResetClientCertPem()
+	ResetClientKeyPem()
 	ResetInsecure()
 	ResetMethod()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
@@ -172,6 +180,46 @@ func (j *jsiiProxy_DataHttp) CdktfStack() cdktf.TerraformStack {
 	_jsii_.Get(
 		j,
 		"cdktfStack",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataHttp) ClientCertPem() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"clientCertPem",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataHttp) ClientCertPemInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"clientCertPemInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataHttp) ClientKeyPem() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"clientKeyPem",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataHttp) ClientKeyPemInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"clientKeyPemInput",
 		&returns,
 	)
 	return returns
@@ -498,7 +546,7 @@ func (j *jsiiProxy_DataHttp) UrlInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/http/3.4.5/docs/data-sources/http http} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/http/3.5.0/docs/data-sources/http http} Data Source.
 func NewDataHttp(scope constructs.Construct, id *string, config *DataHttpConfig) DataHttp {
 	_init_.Initialize()
 
@@ -516,7 +564,7 @@ func NewDataHttp(scope constructs.Construct, id *string, config *DataHttpConfig)
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/http/3.4.5/docs/data-sources/http http} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/http/3.5.0/docs/data-sources/http http} Data Source.
 func NewDataHttp_Override(d DataHttp, scope constructs.Construct, id *string, config *DataHttpConfig) {
 	_init_.Initialize()
 
@@ -534,6 +582,28 @@ func (j *jsiiProxy_DataHttp)SetCaCertPem(val *string) {
 	_jsii_.Set(
 		j,
 		"caCertPem",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DataHttp)SetClientCertPem(val *string) {
+	if err := j.validateSetClientCertPemParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"clientCertPem",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DataHttp)SetClientKeyPem(val *string) {
+	if err := j.validateSetClientKeyPemParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"clientKeyPem",
 		val,
 	)
 }
@@ -950,6 +1020,22 @@ func (d *jsiiProxy_DataHttp) ResetCaCertPem() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetCaCertPem",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DataHttp) ResetClientCertPem() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetClientCertPem",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DataHttp) ResetClientKeyPem() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetClientKeyPem",
 		nil, // no parameters
 	)
 }

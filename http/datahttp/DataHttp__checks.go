@@ -173,6 +173,22 @@ func (j *jsiiProxy_DataHttp) validateSetCaCertPemParameters(val *string) error {
 	return nil
 }
 
+func (j *jsiiProxy_DataHttp) validateSetClientCertPemParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_DataHttp) validateSetClientKeyPemParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_DataHttp) validateSetCountParameters(val interface{}) error {
 	switch val.(type) {
 	case *float64:
